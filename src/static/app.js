@@ -22,16 +22,16 @@ document.addEventListener("DOMContentLoaded", () => {
         
         // Create participants section
         const participantsSection = details.participants && details.participants.length > 0 
-          ? `<div class="participants-section">
+          ? `<section class="participants-section" aria-label="Current Participants">
                <h5>Current Participants (${details.participants.length}/${details.max_participants}):</h5>
                <ul class="participants-list">
                  ${details.participants.map(participant => `<li>${participant}</li>`).join('')}
                </ul>
-             </div>`
-          : `<div class="participants-section">
+             </section>`
+          : `<section class="participants-section" aria-label="Current Participants">
                <h5>Current Participants (0/${details.max_participants}):</h5>
                <p class="no-participants">No participants yet - be the first to join!</p>
-             </div>`;
+             </section>`;
 
         activityCard.innerHTML = `
           <h4>${name}</h4>
